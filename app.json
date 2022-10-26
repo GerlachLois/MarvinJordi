@@ -1,0 +1,37 @@
+
+{
+    "name": "Rclone-Flow",
+    "description": "Simple docker based script to deploy rclone daemon and rclone web gui to Docker supported platforms",
+    "logo": "https://telegra.ph/file/49120e604da42cd01aec1.png",
+    "keywords": [
+        "Rclone",
+        "web-gui"
+    ],
+    "website": "https://github.com/sentinm",
+    "repository": "https://github.com/sentinm/Rclone-Flow",
+    "success_url": "",
+    "stack": "container",
+    "env": {
+        "USERNAME": {
+            "description": "Username which you want (default: admin)",
+            "value": "admin",
+            "required": true
+        },
+        "PASSWORD": {
+            "description": "Password which you want (default: admin)",
+            "value": "admin",
+            "required": true
+        },
+        "CONF_BASE64": {
+            "description": "Your pre-configured rclone.conf encoded by base64. You can use any tool (ex: https://da.gd/base64)",
+            "value": "",
+            "required": true
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
